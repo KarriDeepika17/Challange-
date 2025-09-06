@@ -1,0 +1,4 @@
+This code creates a basic HTML structure for a virtual class tracker, 
+displaying information such as class name, meeting ID, start time, duration,
+and number of participants in a table format. The table is populated with sample data using JavaScript, 
+but in a real-world scenario, the data would be fetched from the Zoom API and integrated into the table.
