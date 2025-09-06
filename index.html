@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Virtual Class Tracker</title>
+	<style>
+		/* Add some basic styling */
+		table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+		
+		th, td {
+			border: 1px solid #ddd;
+			padding: 10px;
+			text-align: left;
+		}
+		
+		th {
+			background-color: #f0f0f0;
+		}
+	</style>
+</head>
+<body>
+	<h1>Virtual Class Tracker</h1>
+	<table id="class-table">
+		<thead>
+			<tr>
+				<th>Class Name</th>
+				<th>Meeting ID</th>
+				<th>Start Time</th>
+				<th>Duration</th>
+				<th>Participants</th>
+			</tr>
+		</thead>
+		<tbody id="class-data">
+			<!-- Data will be populated here -->
+		</tbody>
+	</table>
+
+	<script>
+		// Assuming you have the data in a JSON format
+		const classData = [
+			{
+				className: "Math Class",
+				meetingId: "123456789",
+				startTime: "2023-03-01 10:00 AM",
+				duration: "1 hour",
+				participants: 20
+			},
+			{
+				className: "Science Class",
+				meetingId: "987654321",
+				startTime: "2023-03-01 11:00 AM",
+				duration: "2 hours",
+				participants: 30
+			}
+		];
+
+		// Populate the table with data
+		const tableBody = document.getElementById("class-data");
+		classData.forEach((classInfo) => {
+			const row = document.createElement("tr");
+			row.innerHTML = `
+				<td>${classInfo.className}</td>
+				<td>${classInfo.meetingId}</td>
+				<td>${classInfo.startTime}</td>
+				<td>${classInfo.duration}</td>
+				<td>${classInfo.participants}</td>
+			`;
+			tableBody.appendChild(row);
+		});
+	</script>
+</body>
+</html>
